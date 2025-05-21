@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools{
-        jdk 'jdk17'
+        jdk 'openjdk21'
         maven 'maven3'
     }
 
@@ -33,8 +33,6 @@ pipeline {
                 sh "mvn clean package -DskipTests"
             }
         }
-
-
         
        stage("Docker Build & Push"){
             steps{
