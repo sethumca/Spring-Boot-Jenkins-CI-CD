@@ -1,12 +1,12 @@
 pipeline {
-    // agent any
-    agent {
-        dockerfile {
-            filename 'Dockerfile.final'
-            // label 'docker'
-            args '-v /var/run/docker.sock:/var/run/docker.sock -u root:root'
-        }
-    }
+    agent any
+    // agent {
+    //     dockerfile {
+    //         filename 'Dockerfile.final'
+    //         label 'docker'
+    //         args '-v /var/run/docker.sock:/var/run/docker.sock -u root:root'
+    //     }
+    // }
 
     tools{
         jdk 'openjdk21'
