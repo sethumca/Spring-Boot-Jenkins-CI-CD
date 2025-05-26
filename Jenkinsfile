@@ -4,7 +4,7 @@ pipeline {
         dockerfile {
             filename 'Dockerfile.final'
             label 'docker'
-            args '-v /var/run/docker.sock:/var/run/docker.sock -u 54329:982'
+            args '-v /var/run/docker.sock:/var/run/docker.sock -u root:root'
         }
     }
 
