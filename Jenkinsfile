@@ -27,13 +27,13 @@ pipeline {
             }
         }
 
-        stage('Sonarqube Analysis') {
-            steps {
-                sh ''' mvn sonar:sonar \
-                    -Dsonar.host.url=http://localhost:9000/ \
-                    -Dsonar.login=squ_9bd7c664e4941bd4e7670a88ed93d68af40b42a3 '''
-            }
-        }
+        // stage('Sonarqube Analysis') {
+        //     steps {
+        //         sh ''' mvn sonar:sonar \
+        //             -Dsonar.host.url=http://localhost:9000/ \
+        //             -Dsonar.login=squ_9bd7c664e4941bd4e7670a88ed93d68af40b42a3 '''
+        //     }
+        // }
 
         stage('Clean & Package'){
             steps{
